@@ -1,0 +1,25 @@
+{% extends 'layout/backend.html' %}
+
+{% block container %}
+<div class="row-fluid">
+	<div class="span3">
+		<div class="well sidebar-nav">
+			<ul class="nav nav-list">
+				<li class="nav-header">金鑰資料</li>
+				<li class="active">
+					<a href="{{site_url}}/key"><i class="icon-plus-sign icon-black"></i> 新增金鑰</a>
+				</li>
+				<li>
+					<a href="{{site_url}}/key/list"><i class="icon-list-alt icon-black"></i> 金鑰列表</a>
+				</li>
+				<li>
+					<a href="{{site_url}}/key/search"><i class="icon-search icon-black"></i> 搜尋金鑰</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="span9">
+		{% block right %}{% endblock %}
+	</div>
+</div>
+{% endblock %}

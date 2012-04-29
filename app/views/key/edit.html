@@ -1,0 +1,29 @@
+{% extends 'layout/backend-key.html' %}
+
+{% block right %}
+<form action="{{site_url}}/key/update" method="post" class="well form-horizontal">
+<input type="hidden" name="id" value="{{id}}" />
+	<fieldset>
+		<legend>編輯金鑰</legend>
+		<div class="control-group">
+			<label class="control-label">金鑰</label>
+			<div class="controls">
+				<input type="text" name="code" value="{{ key.code }}">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">狀態</label>
+			<div class="controls">
+				<select name="lock">
+					<option value="0"{% if key.lock == 0 %} selected="selected"{% endif %}>可以使用</option>
+					<option value="1"{% if key.lock == 1 %} selected="selected"{% endif %}>不可使用</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-actions">
+			<button type="submit" class="btn btn-primary">儲存</button>
+			<button type="reset" class="btn">重填</button>
+		</div>
+	</fieldset>
+</form>
+{% endblock %}

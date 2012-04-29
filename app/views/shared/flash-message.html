@@ -1,0 +1,10 @@
+{% if _SESSION.flash.error %}
+	<div class="alert alert-error">
+		<strong>錯誤!</strong> {{ _SESSION.flash.error }}
+	</div>
+{% endif %}
+{% if _SESSION.flash.success %}
+	<div class="alert alert-success">
+		<strong>成功!</strong> {{ _SESSION.flash.success }}
+	</div>
+{% endif %}

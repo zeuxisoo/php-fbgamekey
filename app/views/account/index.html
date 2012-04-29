@@ -1,0 +1,38 @@
+{% extends 'layout/backend.html' %}
+
+{% block container %}
+<div class="hero-unit">
+	<div class="row">
+		<div class="span3 offset3">
+			<form class='form-horizontal' action='account/save' method='post'>
+				<fieldset>
+					<legend>帳號管理</legend>
+					<div class="control-group">
+						<label class='control-label'>舊的密碼</label>
+						<div class='controls'>
+							<input type="password" name="old_password">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class='control-label'>新的密碼</label>
+						<div class='controls'>
+							<input type="password" name="new_password">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class='control-label'>確認密碼</label>
+						<div class='controls'>
+							<input type="password" name="confirm_password">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class='controls'>
+							<button type="submit" class="btn btn-primary">修改</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

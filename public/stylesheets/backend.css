@@ -1,0 +1,20 @@
+/* line 1, ../scss/backend.scss */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+/* line 6, ../scss/backend.scss */
+.sidebar-nav {
+  padding: 9px 0;
+}
+
+/* line 10, ../scss/backend.scss */
+.unused {
+  color: #006600;
+}
+
+/* line 14, ../scss/backend.scss */
+.used {
+  color: #FF0000;
+}

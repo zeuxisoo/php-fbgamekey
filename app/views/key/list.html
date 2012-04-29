@@ -1,0 +1,44 @@
+{% extends 'layout/backend-key.html' %}
+
+{% block right %}
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>金鑰</th>
+			<th>狀態</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for key_code in keys %}
+			<tr>
+				<td>{{ key_code.id }}</td>
+				<td>{{ key_code.code }}</td>
+				<td>
+					{% if key_code.lock == 0 %}
+						<span class="unused">可以使用</span>
+					{% else %}
+						<span class="used">不可使用</span>
+					{% endif %}
+				</td>
+				<td width="24%">
+					<a href="{{site_url}}/key/detail/{{ key_code.id }}" class="btn btn-small btn-success">
+						<i class="icon-book icon-white"></i>
+						詳情
+					</a>
+					<a href="{{site_url}}/key/edit/{{ key_code.id }}" class="btn btn-small btn-info">
+						<i class="icon-pencil icon-white"></i>
+						編輯
+					</a>
+					<a href="{{site_url}}/key/delete/{{ key_code.id }}" class="btn btn-small btn-danger delete-confirm-client-list">
+						<i class="icon-trash icon-white"></i>
+						刪除
+					</a>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{{ paginate|safe }}
+{% endblock %}

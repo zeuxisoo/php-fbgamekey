@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta charset="utf-8">
+<title>遊戲匙</title>
+<link href="{{site_url}}/public/stylesheets/frontend.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	{% block container %}{% endblock %}
+</div>
+<div id="fb-root"></div>
+<script type="text/javascript">
+var SITE_URL = "{{site_url}}", APP_ID = "131457860232512";
+</script>
+<script type="text/javascript" src="{{site_url}}/public/javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="{{site_url}}/public/javascripts/frontend.js"></script>
+</body>
+</html>

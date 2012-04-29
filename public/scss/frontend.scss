@@ -1,0 +1,35 @@
+@import "compass/reset";
+
+body {
+	font-size: 14px;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+
+	#index {
+		ul li {
+			padding: 5px;
+			float: left;
+
+			span.action {
+				color: #0088FF;
+				cursor: pointer;
+			}
+		}
+
+		.gained_key {
+			display: block;
+			width: 484px;
+			height: 57px;
+			text-align: center;
+			position: absolute;
+			left: 18px;
+			top: 134px;
+			margin: 0;
+			background: white;
+			line-height: 57px;
+			color: red;
+			font-size: 20px;
+			font-weight: bold;
+			z-index: 2;
+		}
+	}
+}
