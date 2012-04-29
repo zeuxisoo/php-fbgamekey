@@ -141,8 +141,6 @@ $app->post('/key/search', Application_Helper::need_admin(), function() use ($app
 });
 
 $app->get('/key/detail/:id', Application_Helper::need_admin(), function($id) use ($app) {
-	$id = $app->request()->get('id');
-
 	$key = Model::factory('Key')->find_one($id);
 
 	if ($key === false) {
