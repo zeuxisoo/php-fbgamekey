@@ -1,7 +1,7 @@
 # Using asynchronous method to load facebook javascript adk
 window.fbAsyncInit = ->
 	FB.init
-		appId      : APP_ID
+		appId      : feedInfo.app_id
 		channelUrl : "#{SITE_URL}/public/channel.html"
 		cookie     : true
 		status     : true

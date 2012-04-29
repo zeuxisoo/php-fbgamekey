@@ -2,7 +2,7 @@
   var share;
   window.fbAsyncInit = function() {
     return FB.init({
-      appId: APP_ID,
+      appId: feedInfo.app_id,
       channelUrl: "" + SITE_URL + "/public/channel.html",
       cookie: true,
       status: true,
