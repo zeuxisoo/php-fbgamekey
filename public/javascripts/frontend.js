@@ -30,11 +30,11 @@
     selfGain.html("等待中");
     return FB.ui({
       method: 'feed',
-      name: '《Funmily》X《甜蜜契約》 甜蜜加油站!',
-      link: 'http://www.facebook.com/funmily.sa',
-      picture: 'http://fb.funmily.com/sa/event/20120426/view/images/Update_20120427.jpg',
-      caption: 'http://www.facebook.com/funmily.sa',
-      description: '為慶祝「甜蜜測試」隆重開啟，各位玩家只要成為《甜蜜契約》的粉絲，並完成"甜蜜加油站"活動步驟，就可以額外再獲得500點商城點數及豐富獎品喔。立即參加!'
+      name: feedInfo.name,
+      link: feedInfo.link,
+      picture: feedInfo.picture,
+      caption: feedInfo.caption,
+      description: feedInfo.description
     }, function(response) {
       if (response && response.post_id) {
         return FB.api('/me', function(responseMe) {

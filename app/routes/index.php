@@ -2,7 +2,15 @@
 if (defined("IN_APPS") === false) exit("Access Dead");
 
 $app->get('/', function() use ($app) {
-	$app->render('index/index.html');
+	$feed_info = array();
+	$setting   = Model::factory('Setting')->find_many();
+	foreach($setting as $row) {
+		$feed_info[$row->name] = $row->content;
+	}
+
+	$app->render('index/index.html', array(
+		'feed_info' => json_encode($feed_info)
+	));
 })->name('index');
 
 $app->get('/index/gain_key/:user_id/:username/:post_id', function($user_id, $username, $post_id) use ($app) {

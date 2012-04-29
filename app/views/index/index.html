@@ -9,3 +9,7 @@
 	</ul>
 </div>
 {% endblock %}
+
+{% block footer_javascript %}
+var feedInfo = {{ feed_info|safe }}
+{% endblock %}
