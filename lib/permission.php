@@ -37,7 +37,9 @@ class Permission {
 		if (self::is_admin() === false) {
 			$_SESSION['username'] = "";
 			$_SESSION['error'] = "請重新登入!";
-			header("Location: ".$app->config('site_url'));
+
+			$app->flash('error', '請重新登入!');
+			header("Location: ".$app->redirect($app->urlFor('panel-index')));
 			exit;
 		}
 	}
