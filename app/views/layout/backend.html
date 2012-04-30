@@ -20,7 +20,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" href="{{site_url}}/panel">遊戲匙</a>
+			{% if _SESSION['username'] %}
+				<a class="brand" href="{{site_url}}/panel/home">遊戲匙</a>
+			{% else %}
+				<a class="brand" href="{{site_url}}/panel">遊戲匙</a>
+			{% endif %}
 			<div class="nav-collapse">
 				<ul class="nav">
 					<li><a href="{{site_url}}/key">金鑰管理</a></li>
