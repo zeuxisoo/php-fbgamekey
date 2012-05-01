@@ -53,7 +53,7 @@ $app->post('/panel/login', function() use ($app, $config) {
 });
 
 
-$app->get('/panel/logout', function() use ($app) {
+$app->get('/panel/logout', Application_Helper::need_admin(), function() use ($app) {
 	session_destroy();
 
 	$app->setCookie('auth_key', "");

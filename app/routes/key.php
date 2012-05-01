@@ -1,7 +1,7 @@
 <?php
 if (defined("IN_APPS") === false) exit("Access Dead");
 
-$app->get('/key', function() use ($app) {
+$app->get('/key', Application_Helper::need_admin(), function() use ($app) {
 	$app->render('key/index.html');
 })->name('key-index');
 
