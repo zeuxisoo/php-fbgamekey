@@ -9,6 +9,8 @@
 				<tr>
 					<th>金鑰</th>
 					<td>{{ key.code }}</td>
+				</tr>
+				<tr>
 					<th>使用?</th>
 					<td>
 						{% if key.lock == 0 %}
@@ -21,6 +23,8 @@
 				<tr>
 					<th>用戶 ID</th>
 					<td>{{ key.facebook_user_id | default:'---' }}</td>
+				</tr>
+				<tr>
 					<th>用戶名稱</th>
 					<td>{{ key.facebook_username | default:'---' }}</td>
 				</tr>
