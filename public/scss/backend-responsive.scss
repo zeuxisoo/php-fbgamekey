@@ -1,0 +1,31 @@
+@media(max-width: 480px) {
+	table {
+		thead {
+			tr {
+				th:nth-child(1) {
+					display: none;
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				td:nth-child(1) {
+					display: none;
+				}
+
+				td:nth-child(4) {
+					width: 100px;
+
+					a {
+						&.btn, &.btn-small &.btn-success { padding: 2px; margin: 0px; }
+
+						i {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
