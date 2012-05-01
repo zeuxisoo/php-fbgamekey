@@ -1,42 +1,40 @@
 {% extends "layout/backend-key.html" %}
 
 {% block right %}
-<form action="#" method="post" class="well form-horizontal">
-	<fieldset>
-		<legend>金鑰詳情</legend>
-		<table class="table table-bordered table-striped">
-			<tbody>
-				<tr>
-					<th width="25%">金鑰</th>
-					<td width="75%">{{ key.code }}</td>
-				</tr>
-				<tr>
-					<th>使用?</th>
-					<td>
-						{% if key.lock == 0 %}
-							<span class="unused">可以使用</span>
-						{% else %}
-							<span class="used">不可使用</span>
-						{% endif %}
-					</td>
-				</tr>
-				<tr>
-					<th>用戶 ID</th>
-					<td>{{ key.facebook_user_id | default:'---' }}</td>
-				</tr>
-				<tr>
-					<th>用戶名稱</th>
-					<td>{{ key.facebook_username | default:'---' }}</td>
-				</tr>
-				<tr>
-					<th>文章 ID</th>
-					<td>{{ key.facebook_post_id | default:'---' }}</td>
-				</tr>
-			</tbody>
-		</table>
-		<div class="offset3">
-			<button type="button" class="btn btn-primary" onclick="javascript:history.go(-1)">返回</button>
-		</div>
-	</fieldset>
-</form>
+<fieldset>
+	<legend>金鑰詳情</legend>
+	<table class="table table-bordered table-striped">
+		<tbody>
+			<tr>
+				<th>金鑰</th>
+				<td>{{ key.code }}</td>
+			</tr>
+			<tr>
+				<th>使用?</th>
+				<td>
+					{% if key.lock == 0 %}
+						<span class="unused">可以使用</span>
+					{% else %}
+						<span class="used">不可使用</span>
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<th>用戶 ID</th>
+				<td>{{ key.facebook_user_id | default:'---' }}</td>
+			</tr>
+			<tr>
+				<th>用戶名稱</th>
+				<td>{{ key.facebook_username | default:'---' }}</td>
+			</tr>
+			<tr>
+				<th>文章 ID</th>
+				<td>{{ key.facebook_post_id | default:'---' }}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="offset3">
+		<button type="button" class="btn btn-primary" onclick="javascript:history.go(-1)">返回</button>
+	</div>
+</fieldset>
 {% endblock %}
