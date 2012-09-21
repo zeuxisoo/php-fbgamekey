@@ -5,7 +5,15 @@
 	mv config/common.php.sample config/common.php
 	mv config/database.php.sample config/database.php
 
-# Development
+### Configure
+
+	open db/20120921140700-fb_app_gamekey.sql
+	replace the 1234567891011121 to your APP_ID
+	import db/*.sql into database
+
+	login into http://your/site/url/panel (admin / 12345678)
+
+### Development
 
 	gem install guard
 	guard init livereload
